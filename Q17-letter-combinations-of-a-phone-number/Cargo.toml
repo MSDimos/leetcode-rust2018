@@ -1,0 +1,7 @@
+[package]
+name = "Q17-letter-combinations-of-a-phone-number"
+version = "0.1.0"
+authors = ["dimos <doubledimos@outlook.com>"]
+edition = "2018"
+
+[dependencies]

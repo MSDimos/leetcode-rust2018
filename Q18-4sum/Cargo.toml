@@ -1,0 +1,7 @@
+[package]
+name = "Q18-4sum"
+version = "0.1.0"
+authors = ["dimos <doubledimos@outlook.com>"]
+edition = "2018"
+
+[dependencies]
