@@ -1,0 +1,7 @@
+    Checking Q19-remove-nth-node-from-end-of-list v0.1.0 (/home/dimos/workspace/leetcode/Q19-remove-nth-node-from-end-of-list)
+warning: crate `Q19_remove_nth_node_from_end_of_list` should have a snake case name
+  |
+  = note: #[warn(non_snake_case)] on by default
+  = help: convert the identifier to snake case: `q19_remove_nth_node_from_end_of_list`
+
+    Finished dev [unoptimized + debuginfo] target(s) in 0.29s

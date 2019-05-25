@@ -1,0 +1,7 @@
+[package]
+name = "Q25-reverse-nodes-in-k-group"
+version = "0.1.0"
+authors = ["MSDimos <DoubleDimos@outlook.com>"]
+edition = "2018"
+
+[dependencies]

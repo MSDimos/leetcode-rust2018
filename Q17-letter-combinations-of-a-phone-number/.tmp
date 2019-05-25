@@ -1,0 +1,25 @@
+    Checking Q17-letter-combinations-of-a-phone-number v0.1.0 (/home/dimos/workspace/leetcode/Q17-letter-combinations-of-a-phone-number)
+warning: crate `Q17_letter_combinations_of_a_phone_number` should have a snake case name
+  |
+  = note: #[warn(non_snake_case)] on by default
+  = help: convert the identifier to snake case: `q17_letter_combinations_of_a_phone_number`
+
+warning: length comparison to zero
+  --> src/lib.rs:20:12
+   |
+20 |         if digits.len() == 0 {
+   |            ^^^^^^^^^^^^^^^^^ help: using `is_empty` is clearer and more explicit: `digits.is_empty()`
+   |
+   = note: #[warn(clippy::len_zero)] on by default
+   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#len_zero
+
+warning: writing `&Vec<_>` instead of `&[_]` involves one more reference and cannot be used with non-Vec-based slices.
+  --> src/lib.rs:35:48
+   |
+35 |     fn dfs(s: &mut String, idx: usize, digits: &Vec<usize>, result: &mut Vec<String>) {
+   |                                                ^^^^^^^^^^^ help: change this to: `&[usize]`
+   |
+   = note: #[warn(clippy::ptr_arg)] on by default
+   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#ptr_arg
+
+    Finished dev [unoptimized + debuginfo] target(s) in 0.27s

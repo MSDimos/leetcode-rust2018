@@ -1,0 +1,7 @@
+    Checking Q6-zigzag-conversion v0.1.0 (/home/dimos/workspace/leetcode/Q6-zigzag-conversion)
+warning: crate `Q6_zigzag_conversion` should have a snake case name
+  |
+  = note: #[warn(non_snake_case)] on by default
+  = help: convert the identifier to snake case: `q6_zigzag_conversion`
+
+    Finished dev [unoptimized + debuginfo] target(s) in 0.26s

@@ -1,0 +1,7 @@
+    Checking Q28-implement-strstr v0.1.0 (/home/dimos/workspace/leetcode/Q28-implement-strstr)
+warning: crate `Q28_implement_strstr` should have a snake case name
+  |
+  = note: #[warn(non_snake_case)] on by default
+  = help: convert the identifier to snake case: `q28_implement_strstr`
+
+    Finished dev [unoptimized + debuginfo] target(s) in 0.23s

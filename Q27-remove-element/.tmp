@@ -1,0 +1,15 @@
+    Checking Q27-remove-element v0.1.0 (/home/dimos/workspace/leetcode/Q27-remove-element)
+warning: unused variable: `pairs`
+ --> src/lib.rs:7:13
+  |
+7 |         let pairs = unsafe {
+  |             ^^^^^ help: consider prefixing with an underscore: `_pairs`
+  |
+  = note: #[warn(unused_variables)] on by default
+
+warning: crate `Q27_remove_element` should have a snake case name
+  |
+  = note: #[warn(non_snake_case)] on by default
+  = help: convert the identifier to snake case: `q27_remove_element`
+
+    Finished dev [unoptimized + debuginfo] target(s) in 0.26s

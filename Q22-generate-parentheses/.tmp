@@ -1,0 +1,7 @@
+    Checking Q22-generate-parentheses v0.1.0 (/home/dimos/workspace/leetcode/Q22-generate-parentheses)
+warning: crate `Q22_generate_parentheses` should have a snake case name
+  |
+  = note: #[warn(non_snake_case)] on by default
+  = help: convert the identifier to snake case: `q22_generate_parentheses`
+
+    Finished dev [unoptimized + debuginfo] target(s) in 0.26s

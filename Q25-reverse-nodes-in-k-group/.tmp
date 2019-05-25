@@ -1,0 +1,15 @@
+    Checking Q25-reverse-nodes-in-k-group v0.1.0 (/home/dimos/workspace/leetcode/Q25-reverse-nodes-in-k-group)
+warning: method is never used: `new`
+ --> src/lib.rs:9:5
+  |
+9 |     fn new(val: i32) -> Self {
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^
+  |
+  = note: #[warn(dead_code)] on by default
+
+warning: crate `Q25_reverse_nodes_in_k_group` should have a snake case name
+  |
+  = note: #[warn(non_snake_case)] on by default
+  = help: convert the identifier to snake case: `q25_reverse_nodes_in_k_group`
+
+    Finished dev [unoptimized + debuginfo] target(s) in 0.27s

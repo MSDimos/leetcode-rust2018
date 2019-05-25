@@ -11,9 +11,7 @@ impl Solution {
                 x /= 10;
             }
 
-            if x == rev {
-                true
-            } else if x < rev && (rev / 10) == x {
+            if x == rev || ( x < rev && (rev / 10) == x ) {
                 true
             } else {
                 false

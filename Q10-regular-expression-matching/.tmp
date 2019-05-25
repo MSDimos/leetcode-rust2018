@@ -1,0 +1,24 @@
+    Checking Q10-regular-expression-matching v0.1.0 (/home/dimos/workspace/leetcode/Q10-regular-expression-matching)
+warning: crate `Q10_regular_expression_matching` should have a snake case name
+  |
+  = note: #[warn(non_snake_case)] on by default
+  = help: convert the identifier to snake case: `q10_regular_expression_matching`
+
+warning: an inclusive range would be more readable
+  --> src/lib.rs:15:18
+   |
+15 |         for i in 0..(s_len + 1) {
+   |                  ^^^^^^^^^^^^^^ help: use: `0..=s_len`
+   |
+   = note: #[warn(clippy::range_plus_one)] on by default
+   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#range_plus_one
+
+warning: an inclusive range would be more readable
+  --> src/lib.rs:16:22
+   |
+16 |             for j in 1..(p_len + 1) {
+   |                      ^^^^^^^^^^^^^^ help: use: `1..=p_len`
+   |
+   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#range_plus_one
+
+    Finished dev [unoptimized + debuginfo] target(s) in 0.26s

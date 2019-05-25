@@ -1,0 +1,39 @@
+    Checking Q3_longest-substring-without-repeating-characters v0.1.0 (/home/dimos/workspace/leetcode/Q3_longest-substring-without-repeating-characters)
+warning: unused import: `HashSet`
+ --> src/lib.rs:1:24
+  |
+1 | use std::collections::{HashSet, HashMap};
+  |                        ^^^^^^^
+  |
+  = note: #[warn(unused_imports)] on by default
+
+warning: unused variable: `n`
+  --> src/lib.rs:27:13
+   |
+27 |         let n = chars.len();
+   |             ^ help: consider prefixing with an underscore: `_n`
+   |
+   = note: #[warn(unused_variables)] on by default
+
+warning: unused variable: `j`
+  --> src/lib.rs:29:34
+   |
+29 |         let (mut ans, mut i, mut j): (usize, usize, usize) = (0, 0, 0);
+   |                                  ^ help: consider prefixing with an underscore: `_j`
+
+warning: variable does not need to be mutable
+  --> src/lib.rs:29:30
+   |
+29 |         let (mut ans, mut i, mut j): (usize, usize, usize) = (0, 0, 0);
+   |                              ----^
+   |                              |
+   |                              help: remove this `mut`
+   |
+   = note: #[warn(unused_mut)] on by default
+
+warning: crate `Q3_longest_substring_without_repeating_characters` should have a snake case name
+  |
+  = note: #[warn(non_snake_case)] on by default
+  = help: convert the identifier to snake case: `q3_longest_substring_without_repeating_characters`
+
+    Finished dev [unoptimized + debuginfo] target(s) in 0.25s

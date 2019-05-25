@@ -1,0 +1,49 @@
+    Checking Q32-longest-valid-parentheses v0.1.0 (/home/dimos/workspace/leetcode/Q32-longest-valid-parentheses)
+warning: this `else { if .. }` block can be collapsed
+  --> src/lib.rs:72:28
+   |
+72 |                       } else {
+   |  ____________________________^
+73 | |                         if l > 0 && size.contains_key(&(l - 1)) {
+74 | |                             let pl = *size.get(&(l - 1)).unwrap();
+75 | |
+...  |
+81 | |                         }
+82 | |                     }
+   | |_____________________^
+   |
+   = note: #[warn(clippy::collapsible_if)] on by default
+   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#collapsible_if
+help: try
+   |
+72 |                     } else if l > 0 && size.contains_key(&(l - 1)) {
+73 |     let pl = *size.get(&(l - 1)).unwrap();
+74 | 
+75 |     l = pl;
+76 | } else {
+77 |     size.insert(r, l);
+ ...
+
+warning: value assigned to `l` is never read
+  --> src/lib.rs:56:17
+   |
+56 |         let mut l = 0;
+   |                 ^
+   |
+   = note: #[warn(unused_assignments)] on by default
+   = help: maybe it is overwritten before being read?
+
+warning: value assigned to `r` is never read
+  --> src/lib.rs:57:17
+   |
+57 |         let mut r = 0;
+   |                 ^
+   |
+   = help: maybe it is overwritten before being read?
+
+warning: crate `Q32_longest_valid_parentheses` should have a snake case name
+  |
+  = note: #[warn(non_snake_case)] on by default
+  = help: convert the identifier to snake case: `q32_longest_valid_parentheses`
+
+    Finished dev [unoptimized + debuginfo] target(s) in 0.27s

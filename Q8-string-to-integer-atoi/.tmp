@@ -1,0 +1,47 @@
+    Checking Q8-string-to-integer-atoi v0.1.0 (/home/dimos/workspace/leetcode/Q8-string-to-integer-atoi)
+warning: long literal lacking separators
+  --> src/lib.rs:46:30
+   |
+46 |                             -2147483648
+   |                              ^^^^^^^^^^ help: consider: `2_147_483_648`
+   |
+   = note: #[warn(clippy::unreadable_literal)] on by default
+   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#unreadable_literal
+
+warning: long literal lacking separators
+  --> src/lib.rs:49:29
+   |
+49 |                             2147483647
+   |                             ^^^^^^^^^^ help: consider: `2_147_483_647`
+   |
+   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#unreadable_literal
+
+warning: crate `Q8_string_to_integer_atoi` should have a snake case name
+  |
+  = note: #[warn(non_snake_case)] on by default
+  = help: convert the identifier to snake case: `q8_string_to_integer_atoi`
+
+warning: you don't need to add `&` to all patterns
+  --> src/lib.rs:44:21
+   |
+44 | /                     match error.kind() {
+45 | |                         &core::num::IntErrorKind::Underflow => {
+46 | |                             -2147483648
+47 | |                         },
+...  |
+51 | |                         _ => 0,
+52 | |                     }
+   | |_____________________^
+   |
+   = note: #[warn(clippy::match_ref_pats)] on by default
+   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#match_ref_pats
+help: instead of prefixing all patterns with `&`, you can dereference the expression
+   |
+44 |                     match *error.kind() {
+45 |                         core::num::IntErrorKind::Underflow => {
+46 |                             -2147483648
+47 |                         },
+48 |                         core::num::IntErrorKind::Overflow => {
+   |
+
+    Finished dev [unoptimized + debuginfo] target(s) in 0.26s

@@ -1,0 +1,7 @@
+    Checking Q11-container-with-most-water v0.1.0 (/home/dimos/workspace/leetcode/Q11-container-with-most-water)
+warning: crate `Q11_container_with_most_water` should have a snake case name
+  |
+  = note: #[warn(non_snake_case)] on by default
+  = help: convert the identifier to snake case: `q11_container_with_most_water`
+
+    Finished dev [unoptimized + debuginfo] target(s) in 0.28s

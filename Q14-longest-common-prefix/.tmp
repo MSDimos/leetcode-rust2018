@@ -1,0 +1,25 @@
+    Checking Q14-longest-common-prefix v0.1.0 (/home/dimos/workspace/leetcode/Q14-longest-common-prefix)
+warning: crate `Q14_longest_common_prefix` should have a snake case name
+  |
+  = note: #[warn(non_snake_case)] on by default
+  = help: convert the identifier to snake case: `q14_longest_common_prefix`
+
+warning: identical conversion
+  --> src/lib.rs:13:25
+   |
+13 |             let bytes = s.bytes().into_iter();
+   |                         ^^^^^^^^^^^^^^^^^^^^^ help: consider removing `.into_iter()`: `s.bytes()`
+   |
+   = note: #[warn(clippy::identity_conversion)] on by default
+   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#identity_conversion
+
+warning: use of `unwrap_or` followed by a call to `new`
+  --> src/lib.rs:33:9
+   |
+33 |         String::from_utf8(common_str.drain(0..end_idx).collect()).unwrap_or(String::new())
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: try this: `String::from_utf8(common_str.drain(0..end_idx).collect()).unwrap_or_default()`
+   |
+   = note: #[warn(clippy::or_fun_call)] on by default
+   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#or_fun_call
+
+    Finished dev [unoptimized + debuginfo] target(s) in 0.25s

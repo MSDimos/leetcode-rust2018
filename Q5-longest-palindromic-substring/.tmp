@@ -1,0 +1,44 @@
+    Checking Q5-longest-palindromic-substring v0.1.0 (/home/dimos/workspace/leetcode/Q5-longest-palindromic-substring)
+warning: variable does not need to be mutable
+  --> src/lib.rs:22:31
+   |
+22 |     pub fn longest_palindrome(mut s: String) -> String {
+   |                               ----^
+   |                               |
+   |                               help: remove this `mut`
+   |
+   = note: #[warn(unused_mut)] on by default
+
+warning: crate `Q5_longest_palindromic_substring` should have a snake case name
+  |
+  = note: #[warn(non_snake_case)] on by default
+  = help: convert the identifier to snake case: `q5_longest_palindromic_substring`
+
+warning: writing `&Vec<_>` instead of `&[_]` involves one more reference and cannot be used with non-Vec-based slices.
+ --> src/lib.rs:4:32
+  |
+4 | pub fn expand_around_center(s: &Vec<u8>, center_left: usize, center_right: usize) -> (usize, usize) {
+  |                                ^^^^^^^^ help: change this to: `&[u8]`
+  |
+  = note: #[warn(clippy::ptr_arg)] on by default
+  = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#ptr_arg
+
+warning: use of `unwrap_or` followed by a call to `new`
+  --> src/lib.rs:50:13
+   |
+50 |             String::from_utf8(bytes.drain(l..r + 1).collect()).unwrap_or(String::new())
+   |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: try this: `String::from_utf8(bytes.drain(l..r + 1).collect()).unwrap_or_default()`
+   |
+   = note: #[warn(clippy::or_fun_call)] on by default
+   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#or_fun_call
+
+warning: an inclusive range would be more readable
+  --> src/lib.rs:50:43
+   |
+50 |             String::from_utf8(bytes.drain(l..r + 1).collect()).unwrap_or(String::new())
+   |                                           ^^^^^^^^ help: use: `l..=r`
+   |
+   = note: #[warn(clippy::range_plus_one)] on by default
+   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#range_plus_one
+
+    Finished dev [unoptimized + debuginfo] target(s) in 0.25s

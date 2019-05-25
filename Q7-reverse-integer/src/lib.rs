@@ -9,9 +9,7 @@ impl Solution {
         while x != 0 {
             pop = x % 10;
             x /= 10;
-            if rev > pos_piece || (rev == pos_piece && pop > 7) {
-                return 0;
-            } else if rev < neg_piece || (rev == neg_piece && pop < -8) {
+            if (rev > pos_piece || (rev == pos_piece && pop > 7)) || (rev < neg_piece || (rev == neg_piece && pop < -8)) {
                 return 0;
             } else {
                 rev = rev * 10 + pop;

@@ -1,0 +1,40 @@
+    Checking Q13-roman-to-integer v0.1.0 (/home/dimos/workspace/leetcode/Q13-roman-to-integer)
+warning: unused variable: `idx`
+  --> src/lib.rs:27:17
+   |
+27 |         let mut idx = 0;
+   |                 ^^^ help: consider prefixing with an underscore: `_idx`
+   |
+   = note: #[warn(unused_variables)] on by default
+
+warning: variable does not need to be mutable
+  --> src/lib.rs:27:13
+   |
+27 |         let mut idx = 0;
+   |             ----^^^
+   |             |
+   |             help: remove this `mut`
+   |
+   = note: #[warn(unused_mut)] on by default
+
+warning: crate `Q13_roman_to_integer` should have a snake case name
+  |
+  = note: #[warn(non_snake_case)] on by default
+  = help: convert the identifier to snake case: `q13_roman_to_integer`
+
+warning: methods called `new` usually return `Self`
+  --> src/lib.rs:8:5
+   |
+8  | /     pub fn new() -> HashMap<u8, i32> {
+9  | |         let mut hash_map = HashMap::new();
+10 | |         hash_map.insert(b'I', 1);
+11 | |         hash_map.insert(b'V', 5);
+...  |
+18 | |         hash_map
+19 | |     }
+   | |_____^
+   |
+   = note: #[warn(clippy::new_ret_no_self)] on by default
+   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#new_ret_no_self
+
+    Finished dev [unoptimized + debuginfo] target(s) in 0.24s

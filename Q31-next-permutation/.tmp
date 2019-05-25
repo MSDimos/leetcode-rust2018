@@ -1,0 +1,19 @@
+    Checking Q31-next-permutation v0.1.0 (/home/dimos/workspace/leetcode/Q31-next-permutation)
+warning: crate `Q31_next_permutation` should have a snake case name
+  |
+  = note: #[warn(non_snake_case)] on by default
+  = help: convert the identifier to snake case: `q31_next_permutation`
+
+warning: this looks like you are swapping elements of `nums` manually
+  --> src/lib.rs:30:13
+   |
+30 | /             let c = nums[i];
+31 | |
+32 | |             nums[i] = nums[j];
+33 | |             nums[j] = c;
+   | |_______________________^ help: try: `nums.swap(i, j)`
+   |
+   = note: #[warn(clippy::manual_swap)] on by default
+   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#manual_swap
+
+    Finished dev [unoptimized + debuginfo] target(s) in 0.24s

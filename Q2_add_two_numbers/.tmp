@@ -1,0 +1,25 @@
+    Checking Q2_add_two_numbers v0.1.0 (/home/dimos/workspace/leetcode/Q2_add_two_numbers)
+warning: unused import: `core::borrow::BorrowMut`
+ --> src/lib.rs:1:5
+  |
+1 | use core::borrow::BorrowMut;
+  |     ^^^^^^^^^^^^^^^^^^^^^^^
+  |
+  = note: #[warn(unused_imports)] on by default
+
+warning: variable does not need to be mutable
+  --> src/lib.rs:21:13
+   |
+21 |         let mut node = &mut head;
+   |             ----^^^^
+   |             |
+   |             help: remove this `mut`
+   |
+   = note: #[warn(unused_mut)] on by default
+
+warning: crate `Q2_add_two_numbers` should have a snake case name
+  |
+  = note: #[warn(non_snake_case)] on by default
+  = help: convert the identifier to snake case: `q2_add_two_numbers`
+
+    Finished dev [unoptimized + debuginfo] target(s) in 0.28s

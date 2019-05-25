@@ -1,4 +1,4 @@
-use Q19_remove_nth_node_from_end_of_list::{ ListNode, Solution };
+use Q25_reverse_nodes_in_k_group::{ Solution, ListNode };
 
 fn create_list(v: Vec<i32>) -> Option<Box<ListNode>> {
     let mut list = None;
@@ -25,13 +25,9 @@ fn create_list(v: Vec<i32>) -> Option<Box<ListNode>> {
     list
 }
 
-struct Test {
-    a: String,
-}
-
 fn main() {
-    let head = create_list(vec![1, 2, 3, 4, 5]);
-    let list = Solution::remove_nth_from_end(head, 3);
+    let list = create_list(vec![1, 2]);
+    let r = Solution::reverse_k_group(list, 0);
 
-    println!("{:#?}", list);
+    println!("{:#?}", r);
 }

@@ -1,0 +1,25 @@
+    Checking Q12-integer-to-roman v0.1.0 (/home/dimos/workspace/leetcode/Q12-integer-to-roman)
+warning: Constants have by default a `'static` lifetime
+ --> src/lib.rs:3:24
+  |
+3 | const ROMAN_NUMBER: [[&'static str; 9]; 4] = [
+  |                       -^^^^^^^---- help: consider removing `'static`: `&str`
+  |
+  = note: #[warn(clippy::const_static_lifetime)] on by default
+  = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#const_static_lifetime
+
+warning: value assigned to `low` is never read
+  --> src/lib.rs:13:17
+   |
+13 |         let mut low = 0;
+   |                 ^^^
+   |
+   = note: #[warn(unused_assignments)] on by default
+   = help: maybe it is overwritten before being read?
+
+warning: crate `Q12_integer_to_roman` should have a snake case name
+  |
+  = note: #[warn(non_snake_case)] on by default
+  = help: convert the identifier to snake case: `q12_integer_to_roman`
+
+    Finished dev [unoptimized + debuginfo] target(s) in 0.24s

@@ -1,0 +1,32 @@
+    Checking Q20-valid-parentheses v0.1.0 (/home/dimos/workspace/leetcode/Q20-valid-parentheses)
+warning: this `else { if .. }` block can be collapsed
+  --> src/lib.rs:12:20
+   |
+12 |               } else {
+   |  ____________________^
+13 | |                 if stack.is_empty() {
+14 | |                     return false;
+15 | |                 } else {
+...  |
+22 | |                 }
+23 | |             }
+   | |_____________^
+   |
+   = note: #[warn(clippy::collapsible_if)] on by default
+   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#collapsible_if
+help: try
+   |
+12 |             } else if stack.is_empty() {
+13 |     return false;
+14 | } else {
+15 |     let idx = right_parentheses.iter().position(|c| c == &chr).unwrap();
+16 |     let top = stack.pop().unwrap();
+17 | 
+ ...
+
+warning: crate `Q20_valid_parentheses` should have a snake case name
+  |
+  = note: #[warn(non_snake_case)] on by default
+  = help: convert the identifier to snake case: `q20_valid_parentheses`
+
+    Finished dev [unoptimized + debuginfo] target(s) in 0.26s

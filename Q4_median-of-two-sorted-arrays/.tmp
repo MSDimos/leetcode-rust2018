@@ -1,0 +1,53 @@
+    Checking Q4_median-of-two-sorted-arrays v0.1.0 (/home/dimos/workspace/leetcode/Q4_median-of-two-sorted-arrays)
+warning: value assigned to `max_left` is never read
+  --> src/lib.rs:27:25
+   |
+27 |                 let mut max_left = 0;
+   |                         ^^^^^^^^
+   |
+   = note: #[warn(unused_assignments)] on by default
+   = help: maybe it is overwritten before being read?
+
+warning: value assigned to `min_right` is never read
+  --> src/lib.rs:28:25
+   |
+28 |                 let mut min_right = 0;
+   |                         ^^^^^^^^^
+   |
+   = help: maybe it is overwritten before being read?
+
+warning: crate `Q4_median_of_two_sorted_arrays` should have a snake case name
+  |
+  = note: #[warn(non_snake_case)] on by default
+  = help: convert the identifier to snake case: `q4_median_of_two_sorted_arrays`
+
+warning: variable `A` should have a snake case name
+ --> src/lib.rs:7:17
+  |
+7 |         let mut A = nums1;
+  |                 ^ help: convert the identifier to snake case: `a`
+
+warning: variable `B` should have a snake case name
+ --> src/lib.rs:8:17
+  |
+8 |         let mut B = nums2;
+  |                 ^ help: convert the identifier to snake case: `b`
+
+warning: casting i32 to f64 may become silently lossy if types change
+  --> src/lib.rs:39:28
+   |
+39 |                     return max_left as f64;
+   |                            ^^^^^^^^^^^^^^^ help: try: `f64::from(max_left)`
+   |
+   = note: #[warn(clippy::cast_lossless)] on by default
+   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#cast_lossless
+
+warning: casting i32 to f64 may become silently lossy if types change
+  --> src/lib.rs:50:24
+   |
+50 |                 return ((min_right + max_left) / 2) as f64;
+   |                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: try: `f64::from((min_right + max_left) / 2)`
+   |
+   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#cast_lossless
+
+    Finished dev [unoptimized + debuginfo] target(s) in 0.26s

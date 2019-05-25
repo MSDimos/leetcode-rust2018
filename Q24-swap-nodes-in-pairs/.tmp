@@ -1,0 +1,15 @@
+    Checking Q24-swap-nodes-in-pairs v0.1.0 (/home/dimos/workspace/leetcode/Q24-swap-nodes-in-pairs)
+warning: method is never used: `new`
+ --> src/lib.rs:9:5
+  |
+9 |     fn new(val: i32) -> Self {
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^
+  |
+  = note: #[warn(dead_code)] on by default
+
+warning: crate `Q24_swap_nodes_in_pairs` should have a snake case name
+  |
+  = note: #[warn(non_snake_case)] on by default
+  = help: convert the identifier to snake case: `q24_swap_nodes_in_pairs`
+
+    Finished dev [unoptimized + debuginfo] target(s) in 0.25s

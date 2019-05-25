@@ -1,0 +1,24 @@
+    Checking Q29-divide-two-integers v0.1.0 (/home/dimos/workspace/leetcode/Q29-divide-two-integers)
+warning: crate `Q29_divide_two_integers` should have a snake case name
+  |
+  = note: #[warn(non_snake_case)] on by default
+  = help: convert the identifier to snake case: `q29_divide_two_integers`
+
+warning: casting i32 to i64 may become silently lossy if types change
+  --> src/lib.rs:11:28
+   |
+11 |         let mut dividend = dividend as i64;
+   |                            ^^^^^^^^^^^^^^^ help: try: `i64::from(dividend)`
+   |
+   = note: #[warn(clippy::cast_lossless)] on by default
+   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#cast_lossless
+
+warning: casting i32 to i64 may become silently lossy if types change
+  --> src/lib.rs:12:27
+   |
+12 |         let mut divisor = divisor as i64;
+   |                           ^^^^^^^^^^^^^^ help: try: `i64::from(divisor)`
+   |
+   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#cast_lossless
+
+    Finished dev [unoptimized + debuginfo] target(s) in 0.27s

@@ -1,0 +1,15 @@
+    Checking Q30-substring-with-concatenation-of-all-words v0.1.0 (/home/dimos/workspace/leetcode/Q30-substring-with-concatenation-of-all-words)
+warning: unused variable: `window_width`
+  --> src/lib.rs:87:13
+   |
+87 |         let window_width = word_width * words_num;
+   |             ^^^^^^^^^^^^ help: consider prefixing with an underscore: `_window_width`
+   |
+   = note: #[warn(unused_variables)] on by default
+
+warning: crate `Q30_substring_with_concatenation_of_all_words` should have a snake case name
+  |
+  = note: #[warn(non_snake_case)] on by default
+  = help: convert the identifier to snake case: `q30_substring_with_concatenation_of_all_words`
+
+    Finished dev [unoptimized + debuginfo] target(s) in 0.27s

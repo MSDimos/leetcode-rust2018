@@ -6,8 +6,8 @@ impl Solution {
     pub fn find_median_sorted_arrays(nums1: Vec<i32>, nums2: Vec<i32>) -> f64 {
         let mut A = nums1;
         let mut B = nums2;
-        let m = nums1.len();
-        let n = nums1.len();
+        let m = A.len();
+        let n = m;
         let (mut imin, mut imax): (usize, usize) = (0, m);
         let half = (m + n + 1) / 2;
 
@@ -47,7 +47,7 @@ impl Solution {
                     min_right = A[i].max(B[j]);
                 }
 
-                return (min_right + max_left) / 2.0;
+                return ((min_right + max_left) / 2) as f64;
             }
         }
 

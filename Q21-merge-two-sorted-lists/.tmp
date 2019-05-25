@@ -1,0 +1,33 @@
+    Checking Q21-merge-two-sorted-lists v0.1.0 (/home/dimos/workspace/leetcode/Q21-merge-two-sorted-lists)
+warning: variable does not need to be mutable
+  --> src/lib.rs:41:28
+   |
+41 |     pub fn merge_two_lists(mut l1: Option<Box<ListNode>>, mut l2: Option<Box<ListNode>>) -> Option<Box<ListNode>> {
+   |                            ----^^
+   |                            |
+   |                            help: remove this `mut`
+   |
+   = note: #[warn(unused_mut)] on by default
+
+warning: variable does not need to be mutable
+  --> src/lib.rs:41:59
+   |
+41 |     pub fn merge_two_lists(mut l1: Option<Box<ListNode>>, mut l2: Option<Box<ListNode>>) -> Option<Box<ListNode>> {
+   |                                                           ----^^
+   |                                                           |
+   |                                                           help: remove this `mut`
+
+warning: method is never used: `new`
+  --> src/lib.rs:10:5
+   |
+10 |     fn new(val: i32) -> Self {
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^
+   |
+   = note: #[warn(dead_code)] on by default
+
+warning: crate `Q21_merge_two_sorted_lists` should have a snake case name
+  |
+  = note: #[warn(non_snake_case)] on by default
+  = help: convert the identifier to snake case: `q21_merge_two_sorted_lists`
+
+    Finished dev [unoptimized + debuginfo] target(s) in 0.27s

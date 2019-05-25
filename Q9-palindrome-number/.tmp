@@ -1,0 +1,20 @@
+    Checking Q9-palindrome-number v0.1.0 (/home/dimos/workspace/leetcode/Q9-palindrome-number)
+warning: crate `Q9_palindrome_number` should have a snake case name
+  |
+  = note: #[warn(non_snake_case)] on by default
+  = help: convert the identifier to snake case: `q9_palindrome_number`
+
+warning: this if-then-else expression returns a bool literal
+  --> src/lib.rs:14:13
+   |
+14 | /             if x == rev || ( x < rev && (rev / 10) == x ) {
+15 | |                 true
+16 | |             } else {
+17 | |                 false
+18 | |             }
+   | |_____________^ help: you can reduce it to: `x == rev || ( x < rev && (rev / 10) == x )`
+   |
+   = note: #[warn(clippy::needless_bool)] on by default
+   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_bool
+
+    Finished dev [unoptimized + debuginfo] target(s) in 0.24s
