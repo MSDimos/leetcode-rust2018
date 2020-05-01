@@ -5,10 +5,7 @@ use std::rc::Rc;
 struct Solution {}
 
 impl Solution {
-    pub fn is_same_tree(
-        p: Option<Rc<RefCell<TreeNode>>>,
-        q: Option<Rc<RefCell<TreeNode>>>,
-    ) -> bool {
+    pub fn is_same_tree(p: Option<Rc<RefCell<TreNode>>>, q: Option<Rc<RefCell<TreeNode>>>) -> bool {
         Solution::helper(p.as_ref(), q.as_ref())
     }
 
