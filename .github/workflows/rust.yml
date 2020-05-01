@@ -18,7 +18,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       with:
-        ref: ${GITHUB_REF}
+        ref: ${{ github.ref }}
     - name: check
       run: python ./cli_script.py
       env:
