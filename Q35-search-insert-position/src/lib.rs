@@ -2,7 +2,6 @@ pub struct Solution;
 
 impl Solution {
     pub fn search_insert(nums: Vec<i32>, target: i32) -> i32 {
-
         if nums.is_empty() {
             return 0;
         }
@@ -16,12 +15,11 @@ impl Solution {
             if nums[mid] == target {
                 return mid as i32;
             } else if nums[mid] > target {
-                if  mid > 0 {
+                if mid > 0 {
                     right = mid - 1;
                 } else {
                     return 0;
                 }
-
             } else if nums[mid] < target {
                 if mid < nums.len() - 1 {
                     left = mid + 1;
@@ -35,7 +33,6 @@ impl Solution {
     }
 }
 
-
 #[cfg(test)]
 mod tests {
 
@@ -43,7 +40,7 @@ mod tests {
 
     #[test]
     fn it_works() {
-        let r = Solution::search_insert(vec![1, 3, 5, 6], 7);
-        assert_eq!(1, r);
+        let r = Solution::search_insert(vec![1, 3, 5, 6], 5);
+        assert_eq!(r, 2);
     }
 }
