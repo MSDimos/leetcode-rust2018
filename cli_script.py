@@ -1,7 +1,7 @@
 import os
 
 cwd = os.getcwd()
-dirs = os.listdir()
+dirs = os.listdir(cwd)
 env = os.getenv('STEP')
 run_script = 'cargo check' if env == 'check' else 'cargo test'
 
