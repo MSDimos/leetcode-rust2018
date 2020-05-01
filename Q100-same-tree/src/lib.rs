@@ -1,11 +1,14 @@
-use std::rc::Rc;
-use std::cell::RefCell;
 use leetcode_utils::TreeNode;
+use std::cell::RefCell;
+use std::rc::Rc;
 
 struct Solution {}
 
 impl Solution {
-    pub fn is_same_tree(p: Option<Rc<RefCell<TreeNode>>>, q: Option<Rc<RefCell<TreeNode>>>) -> bool {
+    pub fn is_same_tree(
+        p: Option<Rc<RefCell<TreeNode>>>,
+        q: Option<Rc<RefCell<TreeNode>>>,
+    ) -> bool {
         Solution::helper(p.as_ref(), q.as_ref())
     }
 
@@ -21,8 +24,8 @@ impl Solution {
             if p_ref.val != q_ref.val {
                 false
             } else {
-                Solution::helper(p_ref.left.as_ref(), q_ref.left.as_ref()) &&
-                    Solution::helper(p_ref.right.as_ref(), q_ref.right.as_ref())
+                Solution::helper(p_ref.left.as_ref(), q_ref.left.as_ref())
+                    && Solution::helper(p_ref.right.as_ref(), q_ref.right.as_ref())
             }
         }
     }
@@ -30,8 +33,8 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use leetcode_utils::TreeNode;
     use crate::Solution;
+    use leetcode_utils::TreeNode;
 
     #[test]
     fn it_works() {

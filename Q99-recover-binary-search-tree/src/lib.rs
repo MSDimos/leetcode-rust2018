@@ -1,6 +1,6 @@
-use std::rc::Rc;
-use std::cell::RefCell;
 use leetcode_utils::TreeNode;
+use std::cell::RefCell;
+use std::rc::Rc;
 
 struct Solution {}
 
@@ -18,7 +18,11 @@ impl Solution {
         }
     }
 
-    fn in_order(root: Option<&mut Rc<RefCell<TreeNode>>>,two_ptrs: &mut [*mut TreeNode; 2], prev_ptr: &mut *mut TreeNode) {
+    fn in_order(
+        root: Option<&mut Rc<RefCell<TreeNode>>>,
+        two_ptrs: &mut [*mut TreeNode; 2],
+        prev_ptr: &mut *mut TreeNode,
+    ) {
         if let Some(root_rc) = root {
             let root_ptr = root_rc.as_ptr();
             let mut root_bm = root_rc.borrow_mut();
@@ -43,10 +47,10 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
+    use crate::Solution;
+    use leetcode_utils::TreeNode;
     use std::cell::RefCell;
     use std::rc::Rc;
-    use leetcode_utils::TreeNode;
-    use crate::Solution;
 
     #[test]
     fn it_works() {

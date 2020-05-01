@@ -1,0 +1,16 @@
+name: leetcode-rust2018
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@develop
+
+      - name: check
+        envs:
+          STEP: check
+        run: python ./ci_script.py
+
+      - name: test
+        run: python ./ci_script.py
