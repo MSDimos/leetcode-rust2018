@@ -48,7 +48,7 @@ mod tests {
 
     #[test]
     fn it_works() {
-        let r = Solution::search_range(vec![5, 6, 7, 8, 8, 9], 0);
+        let r = Solution::search_range(vec![5, 6, 7, 8, 8, 9], 8);
         assert_eq!(r, vec![3, 4]);
     }
 }

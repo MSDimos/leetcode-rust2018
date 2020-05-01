@@ -57,7 +57,7 @@ mod tests {
 
     #[test]
     fn it_works() {
-        let c = Solution::count_and_say(5);
-        assert_eq!(&c, "11");
+        let c = Solution::count_and_say(4);
+        assert_eq!(&c, "1211");
     }
 }

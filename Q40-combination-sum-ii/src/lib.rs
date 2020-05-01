@@ -71,7 +71,13 @@ impl Solution {
         result
     }
 
-    fn backtrack(candidates: &Vec<i32>, idx: usize, target: i32, stack: &mut Vec<i32>, result: &mut Vec<Vec<i32>>) {
+    fn backtrack(
+        candidates: &Vec<i32>,
+        idx: usize,
+        target: i32,
+        stack: &mut Vec<i32>,
+        result: &mut Vec<Vec<i32>>,
+    ) {
         let mut prev = -1;
 
         if target == 0 {
@@ -94,20 +100,16 @@ impl Solution {
 #[cfg(test)]
 mod tests {
     use crate::Solution;
+
     #[test]
     fn it_works() {
         let r = Solution::combination_sum2(vec![10, 1, 2, 7, 6, 1, 5], 8);
-        assert_eq!(r, vec![
-            vec![1, 7],
-            vec![1, 2, 5],
-            vec![2, 6],
-            vec![1, 1, 6],
-        ]);
+        assert_eq!(
+            r,
+            vec![vec![1, 1, 6], vec![1, 2, 5], vec![1, 7], vec![2, 6]]
+        );
 
         let r = Solution::combination_sum2(vec![2, 5, 2, 1, 2], 5);
-        assert_eq!(r, vec![
-            vec![1, 2, 2],
-            vec![5],
-        ]);
+        assert_eq!(r, vec![vec![1, 2, 2], vec![5],]);
     }
 }
