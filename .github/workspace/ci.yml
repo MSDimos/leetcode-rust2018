@@ -5,7 +5,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout
-        uses: actions/checkout@develop
+        uses: actions/checkout@v2
+        with:
+          ref: feature/github-action
 
       - name: check
         envs:
