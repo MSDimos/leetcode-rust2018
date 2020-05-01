@@ -18,7 +18,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       with:
-        ref: $GITHUT_REF
+        ref: ${GITHUB_REF}
     - name: check
       run: python ./cli_script.py
       env:
