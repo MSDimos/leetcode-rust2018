@@ -9,7 +9,7 @@ impl Solution {
         Solution::helper(p.as_ref(), q.as_ref())
     }
 
-    fn helper(p: Option<&Rc<RefCell<TreeNode>>>, q: Option<&Rc<RefCell<TreeNode>>>) -> bool {
+    fn helper(p: Option<&Rc<Rl<TreeNode>>>, q: Option<&Rc<RefCell<TreeNode>>>) -> bool {
         if p.xor(q).is_some() {
             false
         } else if p.or(q).is_none() {
