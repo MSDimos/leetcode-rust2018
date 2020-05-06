@@ -11,10 +11,7 @@ pub struct ListNode {
 impl ListNode {
     #[inline]
     pub fn new(val: i32) -> Self {
-        ListNode {
-            next: None,
-            val,
-        }
+        ListNode { next: None, val }
     }
 
     pub fn from_vec(v: Vec<i32>) -> Option<Box<ListNode>> {
@@ -70,7 +67,11 @@ impl TreeNode {
     }
 
     pub fn create_tree(pre_order: Vec<i32>, in_order: Vec<i32>) -> Option<Rc<RefCell<TreeNode>>> {
-        assert_eq!(pre_order.len(), in_order.len(), "pre_order's length must be equal to in_order's");
+        assert_eq!(
+            pre_order.len(),
+            in_order.len(),
+            "pre_order's length must be equal to in_order's"
+        );
         TreeNode::create_tree_dfs(&pre_order[..], &in_order[..])
     }
 
@@ -85,6 +86,7 @@ impl TreeNode {
             if in_order[i] == pre_order[0] {
                 node.left = TreeNode::create_tree_dfs(&pre_order[1..=i], &in_order[0..i]);
                 node.right = TreeNode::create_tree_dfs(&pre_order[(i + 1)..], &in_order[(i + 1)..]);
+                break;
             }
         }
 
@@ -134,12 +136,11 @@ impl TreeNode {
         if let Some(node_rc) = node {
             let refer = node_rc.borrow();
             result.push(refer.val);
-            TreeNode::post_order_dfs(refer.left.as_ref(), result);
-            TreeNode::post_order_dfs(refer.right.as_ref(), result);
+            TreeNode::pre_order_dfs(refer.left.as_ref(), result);
+            TreeNode::pre_order_dfs(refer.right.as_ref(), result);
         }
     }
 }
-
 
 #[cfg(test)]
 mod tests {
@@ -159,8 +160,13 @@ mod tests {
     #[test]
     fn tree_node_test() {
         let tree = TreeNode::create_tree(vec![1, 2, 3], vec![2, 1, 3]);
-        assert_eq!(TreeNode::post_order_traversal(tree), vec![2, 3, 1]);
+        assert_eq!(TreeNode::post_order_traversal(tree.clone()), vec![2, 3, 1]);
+        assert_eq!(TreeNode::pre_order_traversal(tree), vec![1, 2, 3]);
         let tree = TreeNode::create_tree(vec![1, 2, 4, 3, 5], vec![4, 2, 1, 3, 5]);
-        assert_eq!(TreeNode::post_order_traversal(tree), vec![4, 2, 5, 3, 1]);
+        assert_eq!(
+            TreeNode::post_order_traversal(tree.clone()),
+            vec![4, 2, 5, 3, 1]
+        );
+        assert_eq!(TreeNode::pre_order_traversal(tree), vec![1, 2, 4, 3, 5]);
     }
 }

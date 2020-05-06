@@ -1,0 +1,17 @@
+[package]
+name = "q102-binary-tree-level-order-traversal"
+version = "0.1.0"
+authors = ["Dimos Double <doubledimos@outlook.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+leetcode_utils = { path = "../leetcode_utils" }
+
+
+#[lib]
+#name = "q102_binary_tree_level_order_traversal"
+#path = "src/lib.rs"
+#test = true
+#crate-type = ["lib"]
