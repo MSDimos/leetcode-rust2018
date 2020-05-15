@@ -1,3 +1,5 @@
+use std::cmp::{max, min};
+
 pub struct Solution;
 
 impl Solution {
@@ -21,7 +23,6 @@ impl Solution {
                 } else {
                     break;
                 }
-
             }
 
             stack.push(i);
@@ -29,8 +30,30 @@ impl Solution {
 
         ans
     }
-}
 
+    fn trap_s2(heights: Vec<i32>) -> i32 {
+        let len = heights.len();
+        let mut max_left = vec![0; len];
+        let mut max_right = vec![0; len];
+        let mut sum = 0;
+
+        max_left[0] = heights[0];
+        max_right[len - 1] = heights[len - 1];
+
+        for i in 1..len {
+            max_left[i] = max(max_left[i - 1], heights[i]);
+            max_right[len - 1 - i] = max(max_right[len - i], heights[len - 1 - i]);
+        }
+
+        for i in 0..len {
+            if min(max_left[i], max_right[i]) > heights[i] {
+                sum += min(max_left[i], max_right[i]) - heights[i];
+            }
+        }
+
+        sum
+    }
+}
 
 #[cfg(test)]
 mod tests {
@@ -38,6 +61,12 @@ mod tests {
     #[test]
     fn it_works() {
         let r = Solution::trap(vec![0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1]);
+        assert_eq!(r, 6);
+    }
+
+    #[test]
+    fn it_works_s2() {
+        let r = Solution::trap_s2(vec![0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1]);
         assert_eq!(r, 6);
     }
 }
